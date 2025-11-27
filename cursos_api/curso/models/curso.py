@@ -2,7 +2,6 @@
 from django.db import models
 
 class Curso(models.Model):
-    id = models.IntegerField(primary_key=True)
     codigo = models.CharField(max_length=120, unique=True)
     titulo = models.CharField(max_length=120)
     subtitulo = models.CharField(max_length=120)
@@ -20,4 +19,4 @@ class Curso(models.Model):
         ordering = ("id",)
 
     def __str__(self):
-        return self.name
+        return self.titulo
